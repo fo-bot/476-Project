@@ -1,0 +1,4 @@
+USE InventoryDB;
+
+ALTER TABLE InventoryTable
+ADD InventoryID INT AUTO_INCREMENT PRIMARY KEY FIRST;
