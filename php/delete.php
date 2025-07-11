@@ -2,25 +2,23 @@
 require_once 'db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $productId = $_POST["product_id"] ?? "";
+    $inventoryId = $_POST["inventory_id"] ?? "";
 
-    if (!is_numeric($productId)) {
-        echo "❌ Invalid Product ID.";
+    if (!is_numeric($inventoryId)) {
+        echo "❌ Invalid Inventory ID.";
         exit;
     }
 
-    $sql = "DELETE FROM InventoryTable WHERE ProductID = ?";
+    $sql = "DELETE FROM InventoryTable WHERE InventoryID = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $productId);
+    $stmt->bind_param("i", $inventoryId);
 
     if ($stmt->execute()) {
-        if ($stmt->affected_rows > 0) {
-            echo "✅ Product ID $productId deleted successfully.";
-        } else {
-            echo "⚠️ No matching product found.";
-        }
+        echo ($stmt->affected_rows > 0)
+            ? "✅ Inventory record $inventoryId deleted successfully."
+            : "⚠️ No matching record found.";
     } else {
-        echo "❌ Error: " . $stmt->error;
+        echo "❌ Error deleting product: " . $stmt->error;
     }
 
     $stmt->close();
