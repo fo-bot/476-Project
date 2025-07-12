@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $valid_pass = "admin123";
 
     if ($username === $valid_user && $password === $valid_pass) {
-        echo "Login successful!";
+        echo "success";
     } else {
         echo "Invalid username or password.";
     }
