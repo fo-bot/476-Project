@@ -5,8 +5,14 @@ body {
   padding: 20px;
 }
 
-.container {
-  max-width: 800px;
+p{
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.container {  
+  max-width: 1600px;
   margin: auto;
   background: #3f3f3f;
   padding: 30px;
@@ -65,4 +71,35 @@ td {
 
 thead {
   background-color: #212225;
+}
+
+.dashboard-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap; 
+}
+
+.form-section {
+  flex: 0 0 40%;
+  min-width: 350px;
+}
+
+.table-section {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+#inventoryContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#inventoryContainer th,
+#inventoryContainer td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
 }
