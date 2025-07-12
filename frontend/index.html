@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h1>Login</h1>
-    <form id="loginForm">
+    <form id="loginForm" action="login.php" method="POST">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
 
@@ -17,8 +17,7 @@
 
       <button type="submit">Login</button>
     </form>
-    
-    <div id="loginError" style="color: red;"></div>
+    <div id="loginError" style="color: red; margin-top: 10px;"></div>
   </div>
   <script src="script.js"></script>
 </body>
