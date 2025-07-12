@@ -8,67 +8,48 @@
 <body>
   <div class="container">
     <h1>Inventory Dashboard</h1>
+    <div class="dashboard-layout">
+      <div class="forms-section">
+      <!--Search-->
+        <section>
+          <h2>Search Inventory</h2> 
+          <form id="searchForm" action="search.php" method="GET">
+            <input type="text" id="searchInput" name="term" placeholder="Enter Product Name or ID" required>
+            <button type="submit">Search</button>
+          </form>
+          <div id="searchResults"></div>
+        </section>
 
-    <!--Search-->
-    <section>
-      <h2>Search Inventory</h2> 
-      <form id="searchForm" action="search.php" method="GET">
-        <input type="text" id="searchInput" name="term" placeholder="Enter Product Name or ID" required>
-        <button type="submit">Search</button>
-      </form>
-      <div id="searchResults"></div>
-    </section>
+        <!--Update-->
+        <section>
+          <h2>Update Product</h2>
+          <form id="updateForm" action="update.php" method="POST">
+            <input type="text" id="updateId" name="product_id" placeholder="Product ID" required>
+            <input type="text" id="updateQty" name="quantity" placeholder="New Quantity" required>
+            <input type="text" id="updatePrice" name="price" placeholder="New Price" required>
+            <input type="text" id="updateStatus" name="status" placeholder="Status (e.g., A)" required>
+            <button type="submit">Update</button>
+          </form>
+          <div id="updateMsg" style="color: white; margin-top: 10px; font-weight: bold;"></div>
+        </section>
 
-    <!--Update-->
-    <section>
-      <h2>Update Product</h2>
-      <form id="updateForm" action="update.php" method="POST">
-        <input type="text" id="updateId" name="product_id" placeholder="Product ID" required>
-        <input type="text" id="updateQty" name="quantity" placeholder="New Quantity" required>
-        <input type="text" id="updatePrice" name="price" placeholder="New Price" required>
-        <input type="text" id="updateStatus" name="status" placeholder="Status (e.g., A)" required>
-        <button type="submit">Update</button>
-      </form>
-      <div id="updateMsg"></div>
-    </section>
-
-    <!--Delete-->
-    <section>
-      <h2>Delete Product</h2>
-      <form id="deleteForm" action="delete.php" method="GET">
-        <input type="text" id="deleteId" name="product_id" placeholder="Product ID" required>
-        <button type="submit">Delete</button>
-      </form>
-      <div id="deleteMsg"></div>
-    </section>
-
-    <!--Inventory Table-->
-    <section>
-      <h2>Current Inventory</h2>
-      <table id="inventoryTable">
-        <thead>
-          <tr>
-            <th>Product ID</th>
-            <th>Product Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Status</th>
-            <th>Supplier Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!--Example-->
-          <tr>
-            <td>1234</td>
-            <td>Camera</td>
-            <td>60</td>
-            <td>70.60</td>
-            <td>A</td>
-            <td>Hitachi</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+        <!--Delete-->
+        <section>
+          <h2>Delete Product</h2>
+          <form id="deleteForm" action="delete.php" method="GET">
+            <input type="text" id="deleteId" name="product_id" placeholder="Product ID" required>
+            <button type="submit">Delete</button>
+          </form>
+          <div id="deleteMsg" style="color: white; margin-top: 10px; font-weight: bold;"></div>
+        </section>
+      </div>
+      <!--Inventory Table-->
+      <div class="table-section">
+        <h2>Current Inventory</h2>
+        <div id="inventoryContainer">
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
