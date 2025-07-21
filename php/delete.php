@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($stmt->execute()) {
         echo ($stmt->affected_rows > 0)
-            ? "Inventory record $$inventoryId deleted successfully."
+            ? "Inventory record $inventoryId deleted successfully."
             : "No matching record found.";
     } else {
         echo "Error deleting product: " . $stmt->error;
