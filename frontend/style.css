@@ -103,3 +103,22 @@ thead {
   border: 1px solid #ccc;
   text-align: left;
 }
+
+#searchResults {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+#searchResults table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+#searchResults th,
+#searchResults td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+  color: white;
+}
