@@ -14,7 +14,7 @@
         <section>
           <h2>Search Inventory</h2> 
           <form id="searchForm" action="search.php" method="GET">
-            <input type="text" id="searchInput" name="term" placeholder="Enter Product Name or ID" required>
+            <input type="text" id="searchInput" name="term" placeholder="Enter Product Name or Product ID" required>
             <button type="submit">Search</button>
           </form>
           <div id="searchResults"></div>
@@ -24,7 +24,7 @@
         <section>
           <h2>Update Product</h2>
           <form id="updateForm" action="update.php" method="POST">
-            <input type="text" id="updateId" name="product_id" placeholder="Product ID" required>
+            <input type="text" id="updateId" name="inventory_id" placeholder="Inventory ID" required>
             <input type="text" id="updateQty" name="quantity" placeholder="New Quantity" required>
             <input type="text" id="updatePrice" name="price" placeholder="New Price" required>
             <input type="text" id="updateStatus" name="status" placeholder="Status (e.g., A)" required>
@@ -37,7 +37,7 @@
         <section>
           <h2>Delete Product</h2>
           <form id="deleteForm" action="delete.php" method="GET">
-            <input type="text" id="deleteId" name="product_id" placeholder="Product ID" required>
+            <input type="text" id="deleteId" name="inventory_id" placeholder="Inventory ID" required>
             <button type="submit">Delete</button>
           </form>
           <div id="deleteMsg" style="color: white; margin-top: 10px; font-weight: bold;"></div>
