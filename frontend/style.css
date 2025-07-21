@@ -81,9 +81,9 @@ thead {
   flex-wrap: nowrap; 
 }
 
-.form-section {
+.forms-section {
   flex: 0 0 40%;
-  min-width: 350px;
+  min-width: 275px;
 }
 
 .table-section {
