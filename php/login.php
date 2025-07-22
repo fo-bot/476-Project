@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = trim($_POST["username"] ?? "");
     $password = trim($_POST["password"] ?? "");
 
-    // Simulated login check (replace with DB lookup later)
+    // login credentials
     $valid_user = "admin";
     $valid_pass = "admin123";
 
